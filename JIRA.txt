@@ -1,0 +1,195 @@
+
+## **JIRA SETUP & NAVIGATION**
+1.Setting up a Jira Cloud Instance & Navigating to Project Board  
+   - **Windows & Ubuntu**:  
+     1. Go to [Jira Cloud](https://www.atlassian.com/software/jira) and sign up or log in.
+     2. Click on "Create a new project."
+     3. Choose a project template (Scrum/Kanban).
+     4. Name the project and configure settings.
+     5. Navigate to the project board via "Projects" > Select your project.
+
+2. **Navigating to Sprint Backlog & Active Sprint Board**  
+   - **Windows & Ubuntu**:  
+     - Click "Backlog" in the left sidebar to see the sprint backlog.
+     - Click "Active Sprint" to view the current sprint.
+
+3. **Configuring a Kanban Board**  
+   - **Windows & Ubuntu**:  
+     - Navigate to "Board Settings."
+     - Customize columns to reflect workflow.
+     - Configure swimlanes and filters as needed.
+
+4. **Creating & Configuring a Scrum Project**  
+   - **Windows & Ubuntu**:  
+     - Select "Scrum" during project creation.
+     - Set sprint duration and backlog.
+     - Add team members.
+
+5. **Creating a Dashboard for Open Issues, Active Sprints, and Completed Tasks**  
+   - **Windows & Ubuntu**:  
+     - Go to "Dashboards" > "Create Dashboard."
+     - Add widgets for issues, sprints, and tasks.
+
+6. **Creating a Dashboard for Sprint Progress & Issue Breakdown**  
+   - **Windows & Ubuntu**:  
+     - Similar to the previous answer, add widgets for sprint progress and issue status.
+
+---
+
+## **JIRA ISSUE MANAGEMENT & FILTERS**
+7. **Creating an Issue & Assigning It**  
+   - **Windows & Ubuntu**:  
+     - Click "Create" > Fill details > Assign > Select Epic.
+
+8. **Creating a High-Priority Issue**  
+   - **Windows & Ubuntu**:  
+     - While creating an issue, set priority to "High."
+
+9. **Creating a JQL Filter for High-Priority Issues**  
+   - **Windows & Ubuntu**:  
+     - Use: `priority = High ORDER BY created DESC`  
+     - Save & Share the filter.
+
+10. **Tracking All Open Issues Assigned to Team**  
+    - **Windows & Ubuntu**:  
+      - Use JQL: `assignee in (currentUser()) AND status != Done`
+
+11. **Creating an Epic & Linking Stories**  
+    - **Windows & Ubuntu**:  
+      - Create Epic first, then link stories via the "Epic Link" field.
+
+12. **Creating a Jira Story for a New Feature**  
+    - **Windows & Ubuntu**:  
+      - Click "Create" > Select "Story" > Enter details > Assign.
+
+---
+
+## **JIRA SPRINT & EPIC MANAGEMENT**
+13. **Creating a Sprint & Moving Items to It**  
+    - **Windows & Ubuntu**:  
+      - Navigate to "Backlog" > Click "Create Sprint."
+
+14. **Closing a Sprint & Moving Incomplete Tasks**  
+    - **Windows & Ubuntu**:  
+      - Click "Complete Sprint" and move tasks to the next sprint.
+
+15. **Onboarding New Members**  
+    - **Windows & Ubuntu**:  
+      - Go to "User Management" and add users.
+
+16. **Setting Up a New Scrum Project & Configuring Permissions**  
+    - **Windows & Ubuntu**:  
+      - Create a new project and manage permissions under "Project Settings."
+
+---
+
+## **JQL SEARCH QUERIES**
+17. **Finding Issues Assigned to You & "In Progress"**  
+    - **Windows & Ubuntu**:  
+      - Use JQL: `assignee = currentUser() AND status = "In Progress"`
+
+18. **Finding Open Issues in Current Sprint**  
+    - **Windows & Ubuntu**:  
+      - JQL: `sprint in openSprints() AND status != Done`
+
+19. **Finding "Bug" Label Issues Created in Last 7 Days**  
+    - **Windows & Ubuntu**:  
+      - JQL: `labels = Bug AND created >= -7d`
+
+20. **Finding Issues Assigned to You Except "Done"**  
+    - **Windows & Ubuntu**:  
+      - JQL: `assignee = currentUser() AND status != Done`
+
+---
+
+## **GIT & GITHUB BASICS**
+21. **Installing Git & Configuring GitHub Account**  
+    - **Windows**: Install Git via [Git for Windows](https://git-scm.com/downloads)  
+    - **Ubuntu**: `sudo apt update && sudo apt install git`  
+    - Configure:  
+      ```bash
+      git config --global user.name "Your Name"
+      git config --global user.email "your-email@example.com"
+      ```
+
+22. **Updating Git Configuration Email**  
+    - **Windows & Ubuntu**:  
+      ```bash
+      git config --global user.email "new-email@example.com"
+      ```
+
+23. **Initializing a Repository & Linking to GitHub**  
+    - **Windows & Ubuntu**:  
+      ```bash
+      git init
+      git remote add origin <GitHub URL>
+      ```
+
+24. **Creating & Switching Branches**  
+    - **Windows & Ubuntu**:  
+      ```bash
+      git checkout -b feature-branch
+      git push -u origin feature-branch
+      ```
+
+25. **Merging a Feature Branch to Main**  
+    - **Windows & Ubuntu**:  
+      ```bash
+      git checkout main
+      git merge feature-branch
+      git push origin main
+      ```
+
+---
+
+## **GIT COMMIT, MERGE & PUSH OPERATIONS**
+26. **Staging & Committing Changes**  
+    - **Windows & Ubuntu**:  
+      ```bash
+      git add .
+      git commit -m "Commit message"
+      git push origin main
+      ```
+
+27. **Staging Specific Files & Committing**  
+    - **Windows & Ubuntu**:  
+      ```bash
+      git add file1.txt file2.txt
+      git commit -m "Specific files updated"
+      git push
+      ```
+
+28. **Undoing Unstaged Changes**  
+    - **Windows & Ubuntu**:  
+      ```bash
+      git checkout -- filename
+      ```
+
+---
+
+## **GITHUB REPOSITORY MANAGEMENT**
+29. **Creating a Repository & Sharing It**  
+    - **Windows & Ubuntu**:  
+      - Create a repo on GitHub, then `git remote add origin <repo-url>`
+
+30. **Adding a README & .gitignore for Java**  
+    - **Windows & Ubuntu**:  
+      - Create the files and commit them.
+
+31. **Adding a License File & Enabling Branch Protection**  
+    - **Windows & Ubuntu**:  
+      - Add a `LICENSE` file, go to "Settings" > "Branches."
+
+---
+
+## **VIVA QUESTIONS**
+1. What is the difference between Git and GitHub?
+2. How does Jira help in Agile project management?
+3. Explain the difference between Scrum and Kanban.
+4. What is JQL in Jira?
+5. How do you handle merge conflicts in Git?
+6. What is the purpose of `git stash`?
+7. Explain the importance of Git branching.
+8. What is a pull request in GitHub?
+9. What is a fast-forward merge?
+10. How do you set up Jira automation?
